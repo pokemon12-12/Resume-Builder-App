@@ -1,0 +1,36 @@
+.AppWraper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.navbar {
+
+  width: 100%;
+  height: 13vh;
+  background-color: rgba(128, 128, 128, 0.351);
+}
+.HeroPageContent {
+  align-self: flex-end;
+  font-weight: 800;
+  margin-top: 5%;
+  margin-right: 10%;
+}
+.HeroPageContent p {
+  margin-top: 2%;
+  font-style: italic;
+  font-weight: 300;
+}
+.ActionBtn {
+  margin: 5%;
+  padding: 2%;
+  row-gap: 30px;
+}
+.resumebtn {
+  row-gap: 30px;
+}
+.container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
