@@ -63,7 +63,7 @@ const PersonalInfo = () => {
                 updatePersonalInfo("fullName", event.target.value)
               }
               onBlur={() => handleBlur("fullName")}
-              placeholder="Anish kumar"
+              placeholder="Enter you Full name"
             />
             <div className="invalid-feedback">{errors.fullName}</div>
           </div>
@@ -93,7 +93,7 @@ const PersonalInfo = () => {
                 updatePersonalInfo("phone", event.target.value)
               }
               onBlur={() => handleBlur("phone")}
-              placeholder="+91 98765 43210"
+              placeholder="+91 98765 43..."
             />
             <div className="invalid-feedback">{errors.phone}</div>
           </div>

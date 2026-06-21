@@ -1,48 +1,28 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useEffect, useState } from "react";
 
-const STORAGE_KEY = "resumeforge.resume-data";
+const STORAGE_KEY = "resumeforge.resume-data.v2";
 
 const createSampleResumeData = () => ({
   personalInfo: {
-    fullName: "Anish Patel",
-    email: "patelanish7872@gmail.com",
-    phone: "+91 98765 43210",
-    location: "Ahmedabad, India",
-    linkedin: "linkedin.com/in/anish-patel",
-    github: "github.com/anishpatel",
-    summary:
-      "Frontend developer focused on clean interfaces, responsive layouts, and practical product experiences. Comfortable turning design ideas into polished React applications with strong attention to usability and performance.",
+    fullName: "",
+    email: "",
+    phone: "",
+    location: "",
+    linkedin: "",
+    github: "",
+    summary: "",
   },
   education: {
-    college: "Gujarat Technological University",
-    degree: "Bachelor of Engineering",
-    branch: "Computer Engineering",
-    cgpa: "8.72",
-    year: "2026",
+    college: "",
+    degree: "",
+    branch: "",
+    cgpa: "",
+    year: "",
   },
-  skills: ["React", "JavaScript", "Bootstrap", "HTML5", "CSS3"],
-  projects: [
-    {
-      id: 1,
-      projectName: "ResumeForge",
-      description:
-        "A modern resume builder with live preview, PDF export, and local storage persistence.",
-      technologies: "React, Vite, Bootstrap",
-      githubLink: "https://github.com/anishpatel/resumeforge",
-      liveDemoLink: "https://resumeforge.demo",
-    },
-  ],
-  experience: [
-    {
-      id: 1,
-      companyName: "Digital Labs",
-      role: "Frontend Intern",
-      duration: "Jan 2025 - Present",
-      description:
-        "Built responsive dashboard components, improved form usability, and collaborated on production-ready UI updates.",
-    },
-  ],
+  skills: [],
+  projects: [],
+  experience: [],
 });
 
 const normalizeProject = (project, index) => ({

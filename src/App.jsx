@@ -10,7 +10,7 @@ import Projects from "./Components/Projects";
 import Experience from "./Components/Experience";
 import ResumePreview from "./Components/ResumePreview";
 import DownloadButton from "./Components/DownloadButton";
-import Footer from "./Footer";
+import Footer from "./Components/Footer";
 
 function App() {
   const previewRef = useRef(null);
