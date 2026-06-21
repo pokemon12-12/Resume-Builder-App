@@ -1,42 +1,33 @@
 const Footer = () => {
   return (
-    <div className="container">
-      {" "}
-      <footer className="py-3 my-4">
-        {" "}
-        <ul className="nav justify-content-center border-bottom pb-3 mb-3">
-          {" "}
-          <li className="nav-item">
-            <a href="#" className="nav-link px-2 text-body-secondary">
-              Home
+    <footer className="footer-bar mt-5">
+      <div className="container-xl py-4">
+        <div className="row g-3 align-items-center">
+          <div className="col-md-7">
+            <p className="mb-1 text-uppercase small text-secondary fw-semibold">
+              Assignment details
+            </p>
+            <p className="mb-1 fw-semibold text-dark">Name: Anish kumar</p>
+            <p className="mb-0 text-secondary">
+              Email:{" "}
+              <a href="mailto:patelanish7872@gmail.com">
+                patelanish7872@gmail.com
+              </a>
+            </p>
+          </div>
+          <div className="col-md-5 text-md-end">
+            <a
+              href="https://digitalheroesco.com"
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-outline-dark px-4 py-2 rounded-pill fw-semibold"
+            >
+              Built for Digital Heroes
             </a>
-          </li>{" "}
-          <li className="nav-item">
-            <a href="#" className="nav-link px-2 text-body-secondary">
-              Features
-            </a>
-          </li>{" "}
-          <li className="nav-item">
-            <a href="#" className="nav-link px-2 text-body-secondary">
-              Pricing
-            </a>
-          </li>{" "}
-          <li className="nav-item">
-            <a href="#" className="nav-link px-2 text-body-secondary">
-              FAQs
-            </a>
-          </li>{" "}
-          <li className="nav-item">
-            <a href="#" className="nav-link px-2 text-body-secondary">
-              About
-            </a>
-          </li>{" "}
-        </ul>{" "}
-        <p className="text-center text-body-secondary">
-          © 2025 Company, Inc
-        </p>{" "}
-      </footer>{" "}
-    </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };
 

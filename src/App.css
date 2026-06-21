@@ -1,36 +1,329 @@
-.AppWraper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.navbar {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
-  width: 100%;
-  height: 13vh;
-  background-color: rgba(128, 128, 128, 0.351);
+:root {
+  --page-bg: #f5f7fb;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-strong: #ffffff;
+  --border-soft: rgba(15, 23, 42, 0.08);
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --brand: #0f172a;
+  --brand-soft: #e2e8f0;
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.08);
+  --shadow-soft: 0 18px 50px rgba(15, 23, 42, 0.08);
+  --shadow-hover: 0 22px 60px rgba(15, 23, 42, 0.12);
 }
-.HeroPageContent {
-  align-self: flex-end;
-  font-weight: 800;
-  margin-top: 5%;
-  margin-right: 10%;
+
+* {
+  box-sizing: border-box;
 }
-.HeroPageContent p {
-  margin-top: 2%;
-  font-style: italic;
-  font-weight: 300;
+
+html {
+  scroll-behavior: smooth;
 }
-.ActionBtn {
-  margin: 5%;
-  padding: 2%;
-  row-gap: 30px;
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(15, 23, 42, 0.08), transparent 24%),
+    linear-gradient(180deg, #eef3f8 0%, #f7f9fc 40%, #f3f6fb 100%);
+  color: var(--text-main);
 }
-.resumebtn {
-  row-gap: 30px;
+
+a {
+  text-decoration: none;
 }
-.container {
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-shell::before,
+.app-shell::after {
+  content: "";
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.app-shell::before {
+  top: 8%;
+  right: -80px;
+  background: rgba(37, 99, 235, 0.09);
+}
+
+.app-shell::after {
+  bottom: 18%;
+  left: -100px;
+  background: rgba(15, 23, 42, 0.08);
+}
+
+.site-navbar .navbar {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(30, 41, 59, 0.96));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.letter-spacing {
+  letter-spacing: 0.04em;
+}
+
+.hero-panel {
+  max-width: 780px;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.glass-card,
+.builder-card,
+.preview-card,
+.footer-bar {
+  background: var(--surface);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-soft);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.glass-card:hover,
+.builder-card:hover,
+.preview-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.builder-card {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.builder-card:hover {
+  transform: translateY(-2px);
+}
+
+.stack-gap {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.preview-sticky {
+  top: 1.5rem;
+}
+
+.resume-page {
+  background: linear-gradient(180deg, #ffffff 0%, #fcfdff 100%);
+  min-height: 100%;
+}
+
+.preview-header {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  padding-bottom: 1rem;
+}
+
+.contact-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.contact-line a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.contact-line span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.resume-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.resume-section-title::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: rgba(15, 23, 42, 0.12);
+}
+
+.resume-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.resume-label {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.resume-body-text {
+  color: #1f2937;
+  line-height: 1.7;
+}
+
+.resume-entry {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1rem;
+  padding: 1rem 1.1rem;
+  background: rgba(248, 250, 252, 0.85);
+}
+
+.resume-skill-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  font-weight: 600;
+  color: #0f172a;
+  background: var(--brand-soft);
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 0.85rem;
+}
+
+.entry-card {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.resume-link-text {
+  color: var(--accent);
+  font-size: 0.88rem;
+  word-break: break-word;
+}
+
+.resume-link-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--accent);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.resume-link-chip:hover {
+  background: rgba(37, 99, 235, 0.14);
+  color: var(--accent);
+}
+
+.pdf-export-mode {
+  background: #ffffff !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+  width: 794px !important;
+}
+
+.pdf-export-mode .card-body {
+  padding: 24px !important;
+}
+
+.pdf-export-mode .resume-page {
+  background: #ffffff !important;
+}
+
+.pdf-export-mode .resume-entry {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.pdf-export-mode .preview-header {
+  break-after: avoid;
+}
+
+.pdf-export-mode .eyebrow {
+  display: none !important;
+}
+
+.pdf-export-mode .display-6 {
+  font-size: 2rem !important;
+}
+
+.pdf-export-mode .resume-section-title {
+  margin-bottom: 0.55rem;
+}
+
+.pdf-export-mode .resume-entry {
+  padding: 0.8rem 0.9rem;
+}
+
+.pdf-export-mode .resume-body-text {
+  line-height: 1.5;
+}
+
+.footer-bar {
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+@media (max-width: 991.98px) {
+  .preview-sticky {
+    position: static !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-panel h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-panel h2 {
+    font-size: 1.4rem;
+  }
+
+  .glass-card,
+  .builder-card,
+  .preview-card {
+    border-radius: 1.15rem;
+  }
+
+  .resume-info-grid {
+    grid-template-columns: 1fr;
+  }
 }
