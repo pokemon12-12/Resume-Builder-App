@@ -1,23 +1,88 @@
-<<<<<<< HEAD
-# React + Vite
+# Resume Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Resume Builder web application built using React and Vite. Users can create professional resumes by entering their personal information, education, skills, projects, and work experience, while viewing a live preview in real time.
 
-Currently, two official plugins are available:
+## About This Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project was developed as part of the **Custom Software Developer Trial Task** provided by **Digital Heroes** for internship evaluation.
 
-## React Compiler
+The goal of the assignment was to build and deploy a useful online tool that produces real output while demonstrating the ability to follow requirements, use modern development tools, and deploy a complete application independently.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Features
 
-Note: This will impact Vite dev & build performances.
+* Personal Information Section
+* Education Details
+* Skills Management
+* Projects Section
+* Experience Section
+* Live Resume Preview
+* Responsive Design
+* Resume PDF Download
+* Clean and User-Friendly Interface
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Resume-Builder-App
-This is the resume builder app which allows users to create their professional resume which would be ATS friendly and can be used to for the professional usage. This project i have created to showcase my sample assigment work for the internship opportunities at Digital Heroes.
->>>>>>> 5f2363575d7b1ada136d9b6112720ccc356770a1
+* React
+* Vite
+* JavaScript
+* Bootstrap
+* HTML5
+* CSS3
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Navigate to the project folder:
+
+```bash
+cd resume-builder
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+## Deployment
+
+The application is deployed using **Vercel Free Hobby Plan**.
+
+## Assignment Requirements Fulfilled
+
+* Working online tool
+* Public GitHub repository
+* Free deployment on Vercel
+* Real output generation
+* Personal contact information displayed
+* "Built for Digital Heroes" button included
+* No paid services used
+
+## Author
+
+**Anish Patel**
+
+Email: [patelanish7872@gmail.com](mailto:patelanish7872@gmail.com)
+
+## Acknowledgement
+
+Built for the Digital Heroes Custom Software Developer Internship Trial Task.
+
+Digital Heroes: https://digitalheroesco.com
